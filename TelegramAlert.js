@@ -1,8 +1,7 @@
-// telegramAlert.js
 const axios = require("axios");
 
-const Bot_Token = "8363677284:AAFo_7USrdr_2jPxPhzD_7QYIZvP_GFTohI";
-const chat_id = "5339604158";
+const Bot_Token = process.env.BOT_TOKEN;
+const chat_id = process.env.CHAT_ID;
 
 function sendAlert(message) {
   axios.post(`https://api.telegram.org/bot${Bot_Token}/sendMessage`, {
